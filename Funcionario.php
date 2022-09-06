@@ -3,8 +3,8 @@
 
 class Funcionario extends Pessoa
 {
-	public salario;
-	public cargo;
+	public $salario;
+	public $cargo;
 
 
 	function ObterSalario()
@@ -17,6 +17,13 @@ class Funcionario extends Pessoa
 		echo $this->cargo;
 		echo $this->salario;
 		parent::ImprimeDados();
+	}
+
+	function __constructor($salario, $cargo)
+	{
+		$this->salario = $salario;
+		$this->cargo = $cargo;
+
 	}
 
 
